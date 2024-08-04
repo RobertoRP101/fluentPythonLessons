@@ -10,7 +10,7 @@ print(beyond_ascii)
 def is_sqrt(number):
     return math.isqrt(number)**2 == number
 
-sqrtable_numbers = [(number) for number in range(0,101,1) if is_sqrt(number)]
+sqrtable_numbers = [last := (number) for number in range(0,101,1) if is_sqrt(number)]
 print(sqrtable_numbers)
 sqrtable_numbers = list(filter(lambda number: is_sqrt(number) , map(int, range(0,101,1)) ))
 print(sqrtable_numbers)

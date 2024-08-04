@@ -14,8 +14,9 @@ for color in colors:
 colors = ['Red', 'Blue', 'Yellow', 'Green']
 sizes = list(range(7,16,1))
 
-ballons = [(colors, size) for color in colors for size in sizes]
+ballons = [last := (color, size) for color in colors for size in sizes]
 print(ballons)
+print(f'Last: {last}')
 for color in colors:
     for size in sizes:
         print((color, size))
