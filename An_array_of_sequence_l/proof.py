@@ -39,3 +39,21 @@ first, second, *rest = range(11)
 print(first)
 print(second)
 print(rest)
+
+
+# Hasable
+
+def fixed(o):
+    try:
+        hash(o)
+    except TypeError:
+        return False
+    return True
+    
+print(fixed(range(0,11,1)))
+
+
+tuple_numbers = tuple(range(0,11,1))
+list_numbers = list(range(11,21,1))
+numbers = tuple((tuple_numbers, *list_numbers))
+print(fixed(numbers))
