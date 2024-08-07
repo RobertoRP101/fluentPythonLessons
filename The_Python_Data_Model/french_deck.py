@@ -23,7 +23,7 @@ class FrenchDeck(object):
 french_Deck = FrenchDeck()
 for card in french_Deck:
     print(card)
-
+print(french_Deck[12::13])
 print(len(french_Deck))
 print(french_Deck[:7], end='\n')
 print(Card('J', 'hearts'))
